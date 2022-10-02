@@ -4,10 +4,11 @@ import Rick_Morty from './../../assets/rick_morty.png'
 import './images.css'
 
 
-export default function Instructions(){
+export default function Instructions(props){
 
     const mortyGame = () => {
         console.log("morty")
+        props.onModeSelect();
     }
 
     return(

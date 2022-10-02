@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import './game.css'
 import MortyCard from "../MortyCard";
 
 export default function Morty() {
@@ -25,7 +25,7 @@ export default function Morty() {
     }, [])
 
     return (
-        <>
+        <div className="grid-container">
             {mortys ? mortys.map(morty => (
                 <MortyCard
                     key={morty.id}>
@@ -33,7 +33,7 @@ export default function Morty() {
                     <h1>{morty.name}</h1>
                 </MortyCard>
             )) : <h1>loading...</h1>}
-        </>
+        </div>
     )
 
 
