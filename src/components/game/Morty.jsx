@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
 
-import MortyCard from "./MortyCard";
+import MortyCard from "../MortyCard";
 
-export default function GetImages() {
+export default function Morty() {
 
     const [mortys, setMortys] = useState(null)
 
@@ -15,7 +15,7 @@ export default function GetImages() {
                 const rickandmortyapi = await response.json();
 
                 console.log(rickandmortyapi.results)
-                    setMortys(rickandmortyapi.results)
+                setMortys(rickandmortyapi.results)
             }
             catch (err) {
                 alert("Cannot find that morty")
@@ -25,15 +25,16 @@ export default function GetImages() {
     }, [])
 
     return (
-        <div className="gird grid-cols-2">
-
-        {mortys ? mortys.map(morty => (
-            <MortyCard
-            key={morty.id}>
-            <img className="" src={morty.image} alt="" />
-            <h1>{morty.name}</h1>
-            </MortyCard>
-        )) : <h1>loading...</h1>}
-        </div>
+        <>
+            {mortys ? mortys.map(morty => (
+                <MortyCard
+                    key={morty.id}>
+                    <img className="" src={morty.image} alt="" />
+                    <h1>{morty.name}</h1>
+                </MortyCard>
+            )) : <h1>loading...</h1>}
+        </>
     )
+
+
 }
