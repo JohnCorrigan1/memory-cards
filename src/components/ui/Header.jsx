@@ -7,7 +7,11 @@ export default function Header(props) {
     }
 
     const loadMorty = () => {
-        props.onModeSelect()    
+        props.onMortySelect()    
+    }
+
+    const loadRick = () => {
+        props.onRickSelect()
     }
 
     return(
@@ -15,7 +19,7 @@ export default function Header(props) {
             <h1 onClick={backToHome} className="title">Rick & Morty Memory Game</h1>
             <div className="flex gap-10">
                 <h2 className="title" onClick={loadMorty}>Morty</h2>
-                <h2>Rick</h2>
+                <h2 className='title' onClick={loadRick}>Rick</h2>
                 <h2>Everyone</h2>
             </div>
         </div>

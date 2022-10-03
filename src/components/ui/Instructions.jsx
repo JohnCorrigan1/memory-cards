@@ -7,8 +7,11 @@ import './images.css'
 export default function Instructions(props){
 
     const mortyGame = () => {
-        console.log("morty")
-        props.onModeSelect();
+        props.onMortySelect();
+    }
+
+    const rickGame = () => {
+        props.onRickSelect();
     }
 
     return(
@@ -23,7 +26,7 @@ export default function Instructions(props){
             <p>Advance to and complete level 3 to win</p>
             <div className='flex gap-20 mt-10'>
                 <img onClick={mortyGame} className='image' src={Morty} alt="" />
-                <img className='image' src={Rick} alt="" />
+                <img onClick={rickGame} className='image' src={Rick} alt="" />
                 <img className='image' src={Rick_Morty} alt="" />
             </div>
         </div>
