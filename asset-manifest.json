@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.979f03a6.css",
+    "main.js": "/react-gh-pages/static/js/main.a4f9441c.js",
+    "static/media/rick_morty.png": "/react-gh-pages/static/media/rick_morty.a218ca229093de6f08d2.png",
+    "static/media/rick.svg": "/react-gh-pages/static/media/rick.bde51418006e0817fcb099cfea43b341.svg",
+    "static/media/morty.svg": "/react-gh-pages/static/media/morty.b4c43d70ae20a26f58eea44f4551d3b2.svg",
+    "index.html": "/react-gh-pages/index.html",
+    "main.979f03a6.css.map": "/react-gh-pages/static/css/main.979f03a6.css.map",
+    "main.a4f9441c.js.map": "/react-gh-pages/static/js/main.a4f9441c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.979f03a6.css",
+    "static/js/main.a4f9441c.js"
+  ]
+}
