@@ -14,6 +14,10 @@ export default function Instructions(props){
         props.onRickSelect();
     }
 
+    const everyoneGame = () => {
+        props.onEveryoneSelect();
+    }
+
     return(
         <div className="flex flex-col justify-center items-center mt-10">
             <h1>How to play?</h1>
@@ -27,7 +31,7 @@ export default function Instructions(props){
             <div className='flex gap-20 mt-10'>
                 <img onClick={mortyGame} className='image' src={Morty} alt="" />
                 <img onClick={rickGame} className='image' src={Rick} alt="" />
-                <img className='image' src={Rick_Morty} alt="" />
+                <img onClick={everyoneGame} className='image' src={Rick_Morty} alt="" />
             </div>
         </div>
     )

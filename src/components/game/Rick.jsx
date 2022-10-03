@@ -5,6 +5,9 @@ import './game.css'
 export default function Rick(){
     const [ricks, setRicks] = useState(null)
 
+    const clickHandler = (e) => {
+        console.log(e.target.alt)
+    }
     useEffect(() => {
         async function getChars() {
             try {
@@ -22,15 +25,15 @@ export default function Rick(){
         }
         getChars()
     }, [])
-
     return (
         <div className="grid-container justify-center gap-5 mt-5">
             {ricks ? ricks.map(rick => (
-                <MortyCard
-                    key={rick.id}>
-                    <img className="" src={rick.image} alt="" />
+                <div
+                key={rick.id}
+                >
+                <img  onClick={clickHandler} src={rick.image} alt={rick.id} />
                     <h1>{rick.name}</h1>
-                </MortyCard>
+                </div>
             )) : <h1>loading...</h1>}
         </div>
     )

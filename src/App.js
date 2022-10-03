@@ -3,6 +3,7 @@ import Instructions from "./components/ui/Instructions";
 import Header from "./components/ui/Header";
 import Morty from "./components/game/Morty";
 import Rick from './components/game/Rick';
+import Everyone from './components/game/Everyone';
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
     setMode('rick')
   }
 
+  const everyoneHanlder = () => {
+    setMode('everyone')
+  }
+
   const homeHandler = () => {
     setMode(false)
   }
@@ -24,10 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header onHomeSelect={homeHandler} onRickSelect={rickHandler} onMortySelect={mortyHandler} />
-      {!mode && <Instructions onRickSelect={rickHandler} onMortySelect={mortyHandler} />}
+      <Header onHomeSelect={homeHandler} onRickSelect={rickHandler} onMortySelect={mortyHandler} onEveryoneSelect={everyoneHanlder}/>
+      {!mode && <Instructions onRickSelect={rickHandler} onMortySelect={mortyHandler} onEveryoneSelect={everyoneHanlder} />}
       {mode === 'morty' && <Morty />}
       {mode === 'rick' && <Rick />}
+      {mode === 'everyone' && <Everyone />}
     </div>
   );
 }
