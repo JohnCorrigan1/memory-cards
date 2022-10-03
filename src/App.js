@@ -11,9 +11,13 @@ function App() {
     setMode(true)
    }
 
+   const homeHandler = () => {
+    setMode(false)
+   }
+
   return (
     <div className="App">
-     <Header />
+     <Header onHomeSelect={homeHandler} onModeSelect={modeHandler}/>
      {!mode && <Instructions onModeSelect={modeHandler} /> }
      {mode && <Morty /> }
     </div>

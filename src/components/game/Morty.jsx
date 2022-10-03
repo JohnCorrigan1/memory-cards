@@ -25,7 +25,7 @@ export default function Morty() {
     }, [])
 
     return (
-        <div className="grid-container">
+        <div className="grid-container justify-center gap-5 mt-5">
             {mortys ? mortys.map(morty => (
                 <MortyCard
                     key={morty.id}>
