@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import Instructions from "./components/ui/Instructions";
 import Header from "./components/ui/Header";
-import Morty from "./components/game/Morty";
-import Rick from './components/game/Rick';
-import Everyone from './components/game/Everyone';
+import Game from './components/game/Game';
 
 function App() {
 
@@ -31,9 +29,7 @@ function App() {
     <div className="App">
       <Header onHomeSelect={homeHandler} onRickSelect={rickHandler} onMortySelect={mortyHandler} onEveryoneSelect={everyoneHanlder}/>
       {!mode && <Instructions onRickSelect={rickHandler} onMortySelect={mortyHandler} onEveryoneSelect={everyoneHanlder} />}
-      {mode === 'morty' && <Morty />}
-      {mode === 'rick' && <Rick />}
-      {mode === 'everyone' && <Everyone />}
+      {mode && <Game getMode={mode}/>}
     </div>
   );
 }
