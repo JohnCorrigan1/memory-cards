@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/memory-cards/static/css/main.24e5c462.css",
-    "main.js": "/memory-cards/static/js/main.4e6afc39.js",
+    "main.css": "/memory-cards/static/css/main.e6272cbf.css",
+    "main.js": "/memory-cards/static/js/main.c05986bb.js",
     "static/media/rick_morty.png": "/memory-cards/static/media/rick_morty.a218ca229093de6f08d2.png",
     "static/media/rick.svg": "/memory-cards/static/media/rick.bde51418006e0817fcb099cfea43b341.svg",
     "static/media/morty.svg": "/memory-cards/static/media/morty.b4c43d70ae20a26f58eea44f4551d3b2.svg",
     "index.html": "/memory-cards/index.html",
-    "main.24e5c462.css.map": "/memory-cards/static/css/main.24e5c462.css.map",
-    "main.4e6afc39.js.map": "/memory-cards/static/js/main.4e6afc39.js.map"
+    "main.e6272cbf.css.map": "/memory-cards/static/css/main.e6272cbf.css.map",
+    "main.c05986bb.js.map": "/memory-cards/static/js/main.c05986bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.24e5c462.css",
-    "static/js/main.4e6afc39.js"
+    "static/css/main.e6272cbf.css",
+    "static/js/main.c05986bb.js"
   ]
 }
