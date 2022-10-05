@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import MortyCard from '../MortyCard';
+import CharacterCard from '../ui/CharacterCard';
 import './game.css'
 
 let clicked = [];
@@ -20,7 +20,7 @@ export default function Game(props) {
             clicked.push(e.target.alt)
             setStreak(streak + 1)
             setCharacters(shuffle(characters))
-            if (clicked.length === 5) {
+            if (clicked.length === 10) {
                 setLevel(level + 1)
                 clicked = []
                 setStreak(0)
@@ -78,15 +78,14 @@ export default function Game(props) {
 
 
     return (
-        <div>
-            <h1>Level: {level} {streak}/10</h1>
+        <div className='mr-5 ml-5 mb-5'>
+            <h1 className='mt-5'>Level: {level} ({streak} / 10)</h1>
             <div className="grid-container justify-center gap-5 mt-5">
                 {characters ? characters.slice(0, 10).map(char => (
-                    <MortyCard
+                    <CharacterCard
                         key={char.id}>
                         <img onClick={clickHandler} className="" src={char.image} alt={char.id} />
-                        <h1>{char.name}</h1>
-                    </MortyCard>
+                    </CharacterCard>
                 )) : <h1>loading...</h1>}
             </div>
         </div>

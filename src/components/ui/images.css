@@ -7,3 +7,56 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+
+.card:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    transition: ease-out;
+    cursor: pointer;
+}
+
+.modes{
+    display: flex;
+}
+
+@media (max-width: 1250px){
+    .image {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 1050px){
+    .image{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 900px){
+    .image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 750px){
+    .image {
+        height: 200px;
+        width: 200px;   
+    }
+}
+
+@media (max-width: 650px){
+    .modes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .both{
+        grid-column: 1/3;
+        display: flex;
+        justify-content: center;
+    }
+}
+

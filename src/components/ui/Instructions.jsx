@@ -4,7 +4,7 @@ import Rick_Morty from './../../assets/rick_morty.png'
 import './images.css'
 
 
-export default function Instructions(props){
+export default function Instructions(props) {
 
     const mortyGame = () => {
         props.onMortySelect();
@@ -18,20 +18,24 @@ export default function Instructions(props){
         props.onEveryoneSelect();
     }
 
-    return(
+    return (
         <div className="flex flex-col justify-center items-center mt-10">
-            <h1>How to play?</h1>
-            <h2>Choose a mode Rick, Morty, or everyone</h2>
-            <p>You will be presented a page with 10 images</p>
-            <p>Click an image you haven't seen yet</p>
-            <p>Everytime you click an image a new set of 10 will appear</p>
-            <p>For each level there are 20 possible images you will see</p>
-            <p>Get 10 correct clicks in a row to advance to the next level</p>
-            <p>Advance to and complete level 3 to win</p>
-            <div className='flex gap-20 mt-10'>
+            <h1 className='text-xl font-bold'>How to play?</h1>
+            <ul>
+            <li>Choose a mode Rick, Morty, or everyone</li>
+            <li>You will be presented a page with 10 images</li>
+            <li>Click an image you haven't seen yet</li>
+            <li>click an image a new set of 10 will appear</li>
+            <li>There are 20 possible images for each level</li>
+            <li>Get 10 in a row to advance to the next level</li>
+            <li>Complete level 3 to win</li>
+            </ul>
+            <div className='modes mt-10'>
                 <img onClick={mortyGame} className='image' src={Morty} alt="" />
                 <img onClick={rickGame} className='image' src={Rick} alt="" />
-                <img onClick={everyoneGame} className='image' src={Rick_Morty} alt="" />
+                <div className='both'>
+                    <img onClick={everyoneGame} className='image' src={Rick_Morty} alt="" />
+                </div>
             </div>
         </div>
     )
