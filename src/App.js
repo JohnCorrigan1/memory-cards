@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <Header onHomeSelect={homeHandler} onRickSelect={rickHandler} onMortySelect={mortyHandler} onEveryoneSelect={everyoneHanlder}/>
       {!mode && <Instructions onRickSelect={rickHandler} onMortySelect={mortyHandler} onEveryoneSelect={everyoneHanlder} />}
-      {mode && <Game getMode={mode}/>}
+      {mode && <Game getMode={mode} setMode={setMode}/>}
     </div>
   );
 }
