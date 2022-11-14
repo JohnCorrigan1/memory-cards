@@ -24,8 +24,8 @@ export default function Instructions(props) {
             <ul>
             <li>Choose a mode Rick, Morty, or everyone</li>
             <li>You will be presented a page with 10 images</li>
-            <li>Click an image you haven't seen yet</li>
-            <li>click an image a new set of 10 will appear</li>
+            <li>You must click an image that you have not clicked before</li>
+            <li>On every click a new set of 10 images will appear</li>
             <li>There are 20 possible images for each level</li>
             <li>Get 10 in a row to advance to the next level</li>
             <li>Complete level 3 to win</li>
